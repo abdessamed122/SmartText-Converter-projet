@@ -4,7 +4,8 @@
   "main": "index.js",
   "scripts": {
     "server": "nodemon backend/server.js",
-    "frontend": "npm --prefix frontend run dev"
+  "start": "node backend/server.js",
+  "frontend": "npm --prefix frontend run dev"
   },
   "keywords": [],
   "author": "",
