@@ -7,7 +7,9 @@ const fs = require('fs');
 const cors = require('cors'); // استيراد مكتبة CORS
 
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
+
 app.use(express.json()); // Make sure to parse JSON body
 // إعداد CORS للسماح بكل الأصول (يمكن تخصيصها حسب الحاجة)
 app.use(cors({
